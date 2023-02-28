@@ -1026,9 +1026,11 @@ public class CliFrontend {
 	public static void main(final String[] args) {
 		EnvironmentInformation.logEnvironmentInfo(LOG, "Command Line Client", args);
 
+		/*TODO 获取flink conf 目录的路径*/
 		// 1. find the configuration directory
 		final String configurationDirectory = getConfigurationDirectoryFromEnv();
 
+		/*TODO 加载路径中的配置*/
 		// 2. load the global configuration
 		final Configuration configuration = GlobalConfiguration.loadConfiguration(configurationDirectory);
 
